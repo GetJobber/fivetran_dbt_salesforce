@@ -1,8 +1,8 @@
-{% if var('salesforce__lead_enabled', True) -%}
-depends_on: {{ var('lead') }}
-{% else -%}
-depends_on: {{ var('opportunity') }}
-{% endif %}  
+{#{% if var('salesforce__lead_enabled', True) -%}#}
+{#depends_on: {{ var('lead') }}#}
+{#{% else -%}#}
+{#depends_on: {{ var('opportunity') }}#}
+{#{% endif %}#}
 with spine as (
 
     {% if execute and flags.WHICH in ('run', 'build') %}
